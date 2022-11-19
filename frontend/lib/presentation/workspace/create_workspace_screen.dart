@@ -20,7 +20,7 @@ class CreateWorkspaceScreen extends StatelessWidget {
             (result) => _handleSuccessOrFail(context, result),
           );
         },
-        child: const Scaffold(body: _CreateWorkspaceForm()),
+        child: const _CreateWorkspaceForm(),
       ),
     );
   }

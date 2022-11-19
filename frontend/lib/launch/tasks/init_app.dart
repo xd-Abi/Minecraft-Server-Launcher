@@ -1,3 +1,4 @@
+import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../launcher.dart';
@@ -10,6 +11,14 @@ class InitAppWidgetTask extends LauncherTask {
     final widget = context.getIt<EntryPoint>().create();
 
     runApp(_AppWidget(child: widget));
+
+    doWhenWindowReady(() {
+      const initialSize = Size(1280, 720);
+      appWindow.minSize = initialSize;
+      appWindow.size = initialSize;
+      appWindow.alignment = Alignment.center;
+      appWindow.show();
+    });
   }
 }
 

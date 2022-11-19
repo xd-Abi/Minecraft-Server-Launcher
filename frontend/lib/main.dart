@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'launch/startup.dart';
+import 'presentation/widgets/prelude.dart';
 import 'presentation/workspace/create_workspace_screen.dart';
 
 Future<void> main() async {
@@ -11,6 +12,8 @@ Future<void> main() async {
 class App extends EntryPoint {
   @override
   Widget create() {
-    return const CreateWorkspaceScreen();
+    return const FramelessWindow(
+      child: CreateWorkspaceScreen(),
+    );
   }
 }

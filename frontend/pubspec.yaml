@@ -18,6 +18,7 @@ dependencies:
   flutter_bloc: ^8.1.1
   uuid: ^3.0.7
   textstyle_extensions: ^2.0.0-nullsafety
+  bitsdojo_window: ^0.1.5
 
 dev_dependencies:
   flutter_test:
