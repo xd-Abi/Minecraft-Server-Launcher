@@ -46,6 +46,10 @@ class _CreateWorkspaceForm extends StatelessWidget {
         child: Column(
           children: [
             AppText.h1('Create Server'),
+            AppButton(
+              onPressed: () {},
+              child: AppText.h2('Create'),
+            )
           ],
         ),
       ),
