@@ -33,8 +33,8 @@ class AppTheme {
   factory AppTheme.light() {
     return AppTheme(
       bg1: const Color(0xFFFFFFFF),
-      bg2: const Color(0xFFDDE7EB),
-      bg3: const Color(0xFFC1CCD0),
+      bg2: const Color(0xFFE5F0F4),
+      bg3: const Color(0xFFDDE5E9),
       text1: const Color(0xFF000000),
       text2: const Color(0xFF222324),
       text3: const Color(0xFF383C3E),

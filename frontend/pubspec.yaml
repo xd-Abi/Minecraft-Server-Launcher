@@ -17,6 +17,7 @@ dependencies:
   json_annotation: ^4.7.0
   flutter_bloc: ^8.1.1
   uuid: ^3.0.7
+  textstyle_extensions: ^2.0.0-nullsafety
 
 dev_dependencies:
   flutter_test:
@@ -28,3 +29,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: Quicksand
+      fonts:
+        - asset: assets/fonts/Quicksand-Bold.ttf
+        - asset: assets/fonts/Quicksand-Light.ttf
+        - asset: assets/fonts/Quicksand-Medium.ttf
+        - asset: assets/fonts/Quicksand-Regular.ttf
+        - asset: assets/fonts/Quicksand-SemiBold.ttf

@@ -5,6 +5,7 @@ import 'package:msl/core/error.dart';
 import 'package:msl/startup/startup.dart';
 import 'package:msl/workspace/application/core/create_workspace_bloc.dart';
 import 'package:msl/workspace/application/core/workspace.dart';
+import 'package:msl/workspace/presentation/components/prelude.dart';
 
 class CreateWorkspaceScreen extends StatelessWidget {
   const CreateWorkspaceScreen({super.key});
@@ -40,12 +41,15 @@ class _CreateWorkspaceForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      child: Container(
-        width: 300,
-        height: 400,
-        decoration: const BoxDecoration(color: Colors.grey),
+      child: AppCard(
+        width: 400,
+        height: 500,
         child: Column(
-          children: const [],
+          children: [
+            AppText.h1('Hello'),
+            AppText.h2('Hello'),
+            AppText.regular('Hello'),
+          ],
         ),
       ),
     );
