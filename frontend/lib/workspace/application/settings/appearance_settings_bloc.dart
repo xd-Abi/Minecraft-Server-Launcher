@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:msl/workspace/settings/appearance.dart';
+import 'package:msl/workspace/application/settings/appearance.dart';
 
-part 'appearance_settings.freezed.dart';
+part 'appearance_settings_bloc.freezed.dart';
 
 class AppearanceSettingsBloc
     extends Bloc<AppearanceSettingsEvent, AppearanceSettingsState> {
