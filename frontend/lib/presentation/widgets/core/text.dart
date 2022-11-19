@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:msl/workspace/presentation/components/utility/text_styles.dart';
-import 'package:msl/workspace/presentation/components/utility/theme_builder.dart';
 import 'package:textstyle_extensions/textstyle_extensions.dart';
+
+import '../utility/text_styles.dart';
+import '../utility/theme_builder.dart';
 
 class AppText extends StatelessWidget {
   final String text;

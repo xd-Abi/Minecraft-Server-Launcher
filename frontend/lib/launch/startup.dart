@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
-import 'package:msl/startup/launcher.dart';
-import 'package:msl/startup/tasks/init_app.dart';
-import 'package:msl/startup/tasks/init_services.dart';
-import 'package:msl/startup/tasks/resolve_dependencies.dart';
+import 'launcher.dart';
+import 'tasks/init_app.dart';
+import 'tasks/init_services.dart';
+import 'tasks/resolve_dependencies.dart';
 
 /// GetIt instance
 final GetIt getIt = GetIt.instance;

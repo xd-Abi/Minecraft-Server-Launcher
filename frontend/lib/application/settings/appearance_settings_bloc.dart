@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:msl/workspace/application/settings/appearance.dart';
+import 'appearance.dart';
 
 part 'appearance_settings_bloc.freezed.dart';
 
@@ -35,5 +35,5 @@ class AppearanceSettingsState with _$AppearanceSettingsState {
   }) = _AppearanceSettingsState;
 
   factory AppearanceSettingsState.initial() =>
-      AppearanceSettingsState(appearance: Appearance(theme: AppTheme.light()));
+      AppearanceSettingsState(appearance: Appearance(theme: AppTheme.dark()));
 }

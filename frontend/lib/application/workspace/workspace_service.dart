@@ -1,8 +1,7 @@
 import 'dart:io';
-
 import 'package:dartz/dartz.dart';
-import 'package:msl/core/error.dart';
-import 'package:msl/workspace/application/core/workspace.dart';
+import 'workspace.dart';
+import '../core/error.dart';
 import 'package:uuid/uuid.dart';
 
 class WorkspaceService {
@@ -17,11 +16,11 @@ class WorkspaceService {
       Directory dir = Directory(path);
 
       if (!(await dir.exists())) {
-        return right(AppError("Directory does not exist"));
+        return right(AppError('Directory does not exist'));
       }
 
       if (!await dir.list().isEmpty) {
-        return right(AppError("Direcotry is not empty"));
+        return right(AppError('Direcotry is not empty'));
       }
 
       workspace = Workspace(
@@ -31,7 +30,7 @@ class WorkspaceService {
         version: version,
       );
     } catch (e) {
-      return right(AppError("Failed to create workspace"));
+      return right(AppError('Failed to create workspace'));
     }
 
     return left(workspace);

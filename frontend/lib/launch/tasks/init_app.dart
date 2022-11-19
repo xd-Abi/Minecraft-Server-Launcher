@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:msl/startup/launcher.dart';
-import 'package:msl/startup/startup.dart';
-import 'package:msl/workspace/application/settings/appearance_settings_bloc.dart';
+import '../launcher.dart';
+import '../startup.dart';
+import '../../application/prelude.dart';
 
 class InitAppWidgetTask extends LauncherTask {
   @override

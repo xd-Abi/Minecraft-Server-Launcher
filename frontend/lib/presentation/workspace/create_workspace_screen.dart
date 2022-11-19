@@ -1,11 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:msl/core/error.dart';
-import 'package:msl/startup/startup.dart';
-import 'package:msl/workspace/application/core/create_workspace_bloc.dart';
-import 'package:msl/workspace/application/core/workspace.dart';
-import 'package:msl/workspace/presentation/components/prelude.dart';
+
+import '../../application/prelude.dart';
+import '../../launch/startup.dart';
+import '../widgets/prelude.dart';
 
 class CreateWorkspaceScreen extends StatelessWidget {
   const CreateWorkspaceScreen({super.key});
@@ -46,9 +45,7 @@ class _CreateWorkspaceForm extends StatelessWidget {
         height: 500,
         child: Column(
           children: [
-            AppText.h1('Hello'),
-            AppText.h2('Hello'),
-            AppText.regular('Hello'),
+            AppText.h1('Create Server'),
           ],
         ),
       ),

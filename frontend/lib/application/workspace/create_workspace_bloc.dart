@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:msl/core/error.dart';
-import 'package:msl/workspace/application/core/workspace.dart';
-import 'package:msl/workspace/application/core/workspace_service.dart';
+import 'workspace.dart';
+import 'workspace_service.dart';
+import '../core/prelude.dart';
 
 part 'create_workspace_bloc.freezed.dart';
 

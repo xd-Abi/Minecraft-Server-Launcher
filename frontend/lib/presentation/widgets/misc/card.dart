@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'package:msl/workspace/presentation/components/prelude.dart';
+import 'package:flutter/material.dart';
+
+import '../utility/theme_builder.dart';
 
 class AppCard extends StatelessWidget {
   final double? width;

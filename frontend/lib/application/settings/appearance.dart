@@ -46,8 +46,8 @@ class AppTheme {
   factory AppTheme.dark() {
     return AppTheme(
       bg1: const Color(0xFF0F1010),
-      bg2: const Color(0xFF1C1E1F),
-      bg3: const Color(0xFF26292B),
+      bg2: const Color(0xFF191919),
+      bg3: const Color(0xFF1C1E1F),
       text1: const Color(0xFFFFFFFF),
       text2: const Color(0xFFDDE7EB),
       text3: const Color(0xFFC1CCD0),
