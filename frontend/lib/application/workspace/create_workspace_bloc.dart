@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -17,15 +19,40 @@ class CreateWorkspaceBloc
       (event, emit) async => {
         await event.when(
           nameChange: (name) {
-            state.copyWith(name: name);
+            Option<String> error = none();
+
+            if (name.trim().isEmpty) {
+              error = some("Name can't be empty");
+            }
+
+            emit(state.copyWith(name: name, nameError: error));
           },
-          pathChange: (path) {
-            state.copyWith(path: path);
+          pathChange: (path) async {
+            Option<String> error = none();
+
+            if (!await Directory(path).exists()) {
+              error = some('Directory does not exist');
+            }
+
+            state.copyWith(path: path, pathError: error);
           },
           serverVersionChange: (version) {
             state.copyWith(version: version);
           },
           submit: () async {
+            if (state.name.trim().isEmpty) {
+              emit(state.copyWith(nameError: some("Name can't be empty")));
+            }
+            if (!await Directory(state.path).exists()) {
+              emit(state.copyWith(pathError: some("Name can't be empty")));
+            }
+
+            if (state.nameError.isSome() ||
+                state.pathError.isSome() ||
+                state.versionError.isSome()) {
+              return;
+            }
+
             Either<Workspace, AppError> succesOrFail =
                 await workspaceService.create(
               name: state.name,
@@ -53,10 +80,13 @@ class CreateWorkspaceEvent with _$CreateWorkspaceEvent {
 
 @freezed
 class CreateWorkspaceState with _$CreateWorkspaceState {
-  factory CreateWorkspaceState({
+  const factory CreateWorkspaceState({
     required String name,
     required String path,
     required String version,
+    required Option<String> nameError,
+    required Option<String> pathError,
+    required Option<String> versionError,
     required Option<Either<Workspace, AppError>> successOrFail,
   }) = _CreateWorkspaceState;
 
@@ -64,6 +94,9 @@ class CreateWorkspaceState with _$CreateWorkspaceState {
         name: '',
         path: '',
         version: '',
+        nameError: none(),
+        pathError: none(),
+        versionError: none(),
         successOrFail: none(),
       );
 }

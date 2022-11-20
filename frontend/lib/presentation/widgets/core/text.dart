@@ -22,8 +22,11 @@ class AppText extends StatelessWidget {
   factory AppText.h2(String text, {Color? color}) =>
       AppText(text, style: TextStyles.h2, color: color);
 
-  factory AppText.regular(String text) =>
-      AppText(text, style: TextStyles.regular);
+  factory AppText.regular(
+    String text, {
+    required Color color,
+  }) =>
+      AppText(text, style: TextStyles.regular, color: color);
 
   @override
   Widget build(BuildContext context) {
